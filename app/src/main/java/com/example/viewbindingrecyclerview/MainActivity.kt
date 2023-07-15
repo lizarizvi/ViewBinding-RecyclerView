@@ -2,6 +2,7 @@ package com.example.viewbindingrecyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.viewbindingrecyclerview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding?.root)
         val adapter = MainAdapter(TaskList.taskList)
         binding?.taskRv?.adapter = adapter
+        //binding?.taskRv?.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
 
     override fun onDestroy() {
